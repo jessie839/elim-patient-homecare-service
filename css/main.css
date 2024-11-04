@@ -69,7 +69,7 @@ a {
 /* Styles for the fixed contact icon */
 .contact-icon {
   position: fixed;
-  top: 83%; /* Adjust this value as needed to position it above the toggle */
+  top: 90%; /* Adjust this value as needed to position it above the toggle */
   right: 20px; /* Distance from the right side of the screen */
   background-color: #28a745; /* Green color */
   color: white;
