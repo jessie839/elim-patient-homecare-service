@@ -69,7 +69,7 @@ a {
 /* Styles for the fixed contact icon */
 .contact-icon {
   position: fixed;
-  top: 80%; /* Adjust this value as needed to position it above the toggle */
+  top: 83%; /* Adjust this value as needed to position it above the toggle */
   right: 20px; /* Distance from the right side of the screen */
   background-color: #28a745; /* Green color */
   color: white;
@@ -1644,89 +1644,74 @@ section,
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
-.faq .faq-container .faq-item {
-  background-color: var(--surface-color);
-  position: relative;
-  padding: 20px;
-  margin-bottom: 15px;
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
-  border-radius: 5px;
-  overflow: hidden;
+
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
-.faq .faq-container .faq-item:last-child {
-  margin-bottom: 0;
+.faq-title {
+    text-align: center;
+    color: #0066cc;
+    margin-bottom: 40px;
+    font-size: 32px;
 }
 
-.faq .faq-container .faq-item h3 {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  margin: 0 30px 0 0;
-  transition: 0.3s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+.faq-item {
+    margin-bottom: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.faq .faq-container .faq-item h3 .num {
-  color: var(--accent-color);
-  padding-right: 5px;
+.faq-question {
+    padding: 16px 20px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
 }
 
-.faq .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
+.faq-question:hover {
+    background-color: #f8f9fa;
 }
 
-.faq .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #0066cc;
+    color: white;
+    transition: all 0.3s ease;
 }
 
-.faq .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
-  overflow: hidden;
+.faq-answer-content {
+    padding: 15px 20px;
+    line-height: 1.4;
 }
 
-.faq .faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
+.faq-question.active {
+    background-color: #0066cc;
+    color: white;
 }
 
-.faq .faq-container .faq-item .faq-toggle:hover {
-  color: white;
+.faq-question.active + .faq-answer {
+    max-height: 200px;
 }
 
-.faq .faq-container .faq-active {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  color: var(--contrast-color);
+.arrow {
+    transition: transform 0.3s ease;
 }
 
-.faq .faq-container .faq-active h3,
-.faq .faq-container .faq-active h3:hover {
-  color: var(--contrast-color);
+.active .arrow {
+    transform: rotate(180deg);
 }
 
-.faq .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.faq .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
-  color: white;
-}
 
 /*--------------------------------------------------------------
 # Testimonials Section

@@ -12,6 +12,9 @@
   <link href="img/logo.jpg" rel="icon">
   <link href="img/logo.jpg" rel="apple-touch-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/aos/aos.css">
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
  
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -459,7 +462,8 @@
           </div>
           <div class="row">
             <div class="col-md-4 form-group mt-3">
-              <input type="datetime-local" name="date" class="form-control" id="date" placeholder="Appointment Date" required>
+              
+              <input type="date" name="date" class="form-control" id="date" placeholder="Appointment Date" required>
             </div>
             <div class="col-md-4 form-group mt-3">
               <select name="department" id="department" class="form-select" required >
@@ -492,77 +496,60 @@
       </div>
     </section>
   
-     <section id="faq" class="faq section light-background">
+    <div class="faq-container">
+      <h1 class="faq-title" style="color:#004a8f;">Frequently Asked Questions</h1>
+      
+      
+      <div class="faq-item">
+          <div class="faq-question">
+              What are your working hours?
+              <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+              <div class="faq-answer-content">
+                  We provide 24/7 service, including weekends and holidays.
+              </div>
+          </div>
+      </div>
 
       
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Frequently Asked Questions</h2>
-        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-      </div>
 
-      <div class="container">
-
-        <div class="row justify-content-center">
-
-          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="faq-container">
-
-              <div class="faq-item faq-active">
-                <h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
-                <div class="faq-content">
-                  <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
-                <div class="faq-content">
-                  <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
-                <div class="faq-content">
-                  <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
-                <div class="faq-content">
-                  <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
-                <div class="faq-content">
-                  <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-              <div class="faq-item">
-                <h3>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h3>
-                <div class="faq-content">
-                  <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-            </div>
-
+      <div class="faq-item">
+          <div class="faq-question">
+              Are your caregivers certified?
+              <span class="arrow">▼</span>
           </div>
-
-        </div>
-
+          <div class="faq-answer">
+              <div class="faq-answer-content">
+                  Yes, all caregivers are certified, background-checked, and professionally trained.
+              </div>
+          </div>
       </div>
 
-    </section>
+      <div class="faq-item">
+          <div class="faq-question">
+              How quickly can service start?
+              <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+              <div class="faq-answer-content">
+                  We can start services within 24-48 hours of initial contact.
+              </div>
+          </div>
+      </div>
+
+      <div class="faq-item">
+          <div class="faq-question">
+              Do you require a minimum hours booking?
+              <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+              <div class="faq-answer-content">
+                  Yes, we require a minimum of 4 hours per visit for quality care assurance.
+              </div>
+          </div>
+      </div>
+  </div>
     <section id="testimonials" class="testimonials section">
 
       <div class="container">
@@ -601,7 +588,7 @@
                     <div class="d-flex">
                      
                       <div>
-                        <h3>xxxxxxx</h3>
+                        <h3>Karthik Iyer</h3>
                         
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -610,7 +597,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
+                      <span>"I had a wonderful experience with this service! They were very professional and delivered my project on time. Highly recommended!"</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -621,7 +608,7 @@
                     <div class="d-flex">
                      
                       <div>
-                        <h3>xxxxx</h3>
+                        <h3>Lakshmi Subramanian</h3>
                         
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -630,7 +617,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
+                      <span>"The quality of work was exceptional! I appreciate the attention to detail and the team's commitment to customer satisfaction."</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -641,7 +628,7 @@
                     <div class="d-flex">
                       
                       <div>
-                        <h3>xxxxxx</h3>
+                        <h3>Arjun Ravi</h3>
                         
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -650,7 +637,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
+                      <span>"Great service! The staff was friendly and helped me with all my queries. I'm very satisfied with the results!"</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -661,7 +648,7 @@
                     <div class="d-flex">
                       
                       <div>
-                        <h3>xxxxx</h3>
+                        <h3>Priya Ramesh</h3>
                         
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -670,7 +657,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
+                      <span>"I was impressed by the quick turnaround and the quality of the service. Will definitely recommend to my friends and family!"</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -681,7 +668,7 @@
                     <div class="d-flex">
                       
                       <div>
-                        <h3>xxxxxx</h3>
+                        <h3>Vikram Nair</h3>
                         
                         <div class="stars">
                           <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -690,7 +677,7 @@
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      <span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
+                      <span>"Excellent communication throughout the process. They understood my needs perfectly and delivered beyond my expectations!"</span>
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -929,6 +916,29 @@
   <script src="vendor/glightbox/js/glightbox.min.js"></script>
   <script src="vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            AOS.init();
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                speed: 600,
+                autoplay: {
+                    delay: 5000,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true,
+                },
+            });
+        });
+    </script>
+    
 
  
   <script src="js/main.js"></script>
@@ -954,6 +964,36 @@
         updateCounter();
     });
 </script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.faq-item h3').on('click', function() {
+        // Toggle the active class on the clicked FAQ item
+        const parentItem = $(this).parent('.faq-item');
+        parentItem.toggleClass('faq-active');
+
+        // Slide toggle the content
+        parentItem.find('.faq-content').slideToggle();
+
+        // Optionally change the icon direction
+        const toggleIcon = parentItem.find('.faq-toggle');
+        toggleIcon.toggleClass('bi-chevron-right bi-chevron-down');
+    });
+});
+</script>
+<script>
+  document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+          document.querySelectorAll('.faq-question').forEach(item => {
+              if (item !== question) {
+                  item.classList.remove('active');
+              }
+          });
+          question.classList.toggle('active');
+      });
+  });
+</script>
+
   
 </body>
 
