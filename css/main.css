@@ -82,10 +82,12 @@ a {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
-.contact-icon:hover {
-  background-color: #218838; /* Slightly darker green on hover */
+.contact-icon:hover{
+  background-color: #059652;
+  color: white;
 }
+
+
 .footer {
   background-color: #004a8f;
   color: #fff;
@@ -211,9 +213,7 @@ h6 {
   transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #00a2b8; /* Darker aqua color */
-}
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -284,9 +284,7 @@ h6 {
   transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #00afc6; /* Darker aqua color */
-}
+
 
 
 /* Pulsating Play Button
