@@ -31,6 +31,64 @@
   
   <link href="css/main.css" rel="stylesheet">
   <style>
+    .form-container {
+        max-width: 500px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        margin-left: auto;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    button {
+        background-color: #1977cc;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .note {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #666;
+    }
+</style>
+  <style>
     /* Background overlay */
     .stats-section {
             background: linear-gradient(45deg, #004a8f, #1977cc);
@@ -447,7 +505,7 @@
       
     
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form action="" method="POST">
           <div class="row">
             <div class="col-md-4 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -455,7 +513,7 @@
             <div class="col-md-4 form-group mt-3 mt-md-0">
               <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
             </div>
-            <input type="hidden" name="access_key" value="633db5ef-373f-45a1-9269-f209609aeab4">
+            
             <div class="col-md-4 form-group mt-3 mt-md-0">
               <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
             </div>
@@ -820,29 +878,34 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.3s" >
-            <form action="https://api.web3forms.com/submit" method="POST">
-              <div class="row g-3">
-                  <div class="col-12">
-                      <input type="text" name="name" class="form-control border-0 bg-light px-4" placeholder="Your Name" style="height: 55px;" required>
+          
+            <div class="form-container">
+              <form id="contactForm" onsubmit="return sendEmail(event)">
+                  <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" required>
                   </div>
-                  <div class="col-12">
-                      <input type="email" name="email" class="form-control border-0 bg-light px-4" placeholder="Your Email" style="height: 55px;" required>
+      
+                  <div class="form-group">
+                      <label for="email">Your Email:</label>
+                      <input type="email" id="email" name="email" required>
                   </div>
-                  <div class="col-12">
-                      <input type="text" name="subject" class="form-control border-0 bg-light px-4" placeholder="Subject" style="height: 55px;" required>
+      
+                  <div class="form-group">
+                      <label for="subject">Subject:</label>
+                      <input type="text" id="subject" name="subject" required>
                   </div>
-                  <input type="hidden" name="access_key" value="633db5ef-373f-45a1-9269-f209609aeab4">
-                  <div class="col-12">
-                      <textarea name="message" class="form-control border-0 bg-light px-4 py-3" rows="5" placeholder="Message" required></textarea>
+      
+                  <div class="form-group">
+                      <label for="message">Message:</label>
+                      <textarea id="message" name="message" required></textarea>
                   </div>
-                  <div class="col-12">
-                      <button class="btn btn-primary w-100 py-3" style="background-color: #1977cc;color:white;border-color: #1977cc "onmouseover="this.style.backgroundColor='#004a8f'"
-                      onmouseout="this.style.backgroundColor='#1977cc'"="submit">Send Message</button>
-                  </div>
-              </div>
-          </form>
-        </div>
+      
+                  <button type="submit">Send Message</button>
+                  
+              </form>
+          </div>
+          
         
 
         </div>
@@ -989,6 +1052,34 @@ $(document).ready(function() {
           question.classList.toggle('active');
       });
   });
+</script>
+<script>
+  function sendEmail(event) {
+      event.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      // Construct email body
+      const emailBody = `
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+      `.trim();
+
+      // Replace 'your.email@example.com' with your actual email address
+      const mailtoLink = `mailto:jessitahannahselvi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+      
+      // Open default email client
+      window.location.href = mailtoLink;
+
+      return false;
+  }
 </script>
 
   
