@@ -183,3 +183,48 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+  
+  function sendEmail(event) {
+      event.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('nam').value;
+      const email = document.getElementById('emai').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      // Construct email body with name and email prefilled
+      const emailBody = `Hello,%0D%0A%0D%0AName: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+
+      // Gmail link to open in a new tab with filled subject and body
+      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=jessithannahselvi@gmail.com&su=${encodeURIComponent(subject)}&body=${emailBody}`;
+      
+      // Open Gmail in a new tab
+      window.open(gmailLink, '_blank');
+
+      return false;
+  }
+  function sendAppointmentEmail(event) {
+    event.preventDefault();
+
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const date = document.getElementById('date').value;
+    const department = document.getElementById('department').value;
+    const message = document.querySelector('textarea[name="message"]').value;
+
+    // Construct email body with form details prefilled
+    const emailBody = `Hello,%0D%0A%0D%0AName: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0APhone: ${encodeURIComponent(phone)}%0D%0AAppointment Date: ${encodeURIComponent(date)}%0D%0AService: ${encodeURIComponent(department)}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+
+    // Gmail link to open in a new tab with filled subject and body
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=jessitahannahselvi@gmail.com&su=Appointment%20Request&body=${emailBody}`;
+
+    // Open Gmail in a new tab
+    window.open(gmailLink, '_blank');
+
+    return false;
+}
+
