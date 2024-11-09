@@ -185,45 +185,56 @@
 })();
 
   
-  function sendEmail(event) {
-      event.preventDefault();
-      
-      // Get form values
-      const name = document.getElementById('nam').value;
-      const email = document.getElementById('emai').value;
-      const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value;
+function sendEmail(event) {
+  event.preventDefault();
+  
+  // Get form values
+  const name = document.getElementById('nam').value;
+  const email = document.getElementById('emai').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
 
-      // Construct email body with name and email prefilled
-      const emailBody = `Hello, Name: ${encodeURIComponent(name)}Email: ${encodeURIComponent(email)}Message: ${encodeURIComponent(message)}`;
+  // Construct email body with plain line breaks
+  const emailBody = `Hello,\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
 
-      // Gmail link to open in a new tab with filled subject and body
-      const mailtoLink = `mailto:jessitahannahselvi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-            
-            // Open default email client
-    window.location.href = mailtoLink;
+  // Create the mailto link with minimal encoding
+  const mailtoLink = `mailto:jessitahannahselvi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
 
-      return false;
-  }
-  function sendAppointmentEmail(event) {
-    event.preventDefault();
+  // Open default email client
+  window.location.href = mailtoLink;
 
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const date = document.getElementById('date').value;
-    const department = document.getElementById('department').value;
-    const message = document.querySelector('textarea[name="message"]').value;
-
-    // Construct email body with form details prefilled
-    const emailBody = `Hello, Name: ${encodeURIComponent(name)}`+ `Email: ${encodeURIComponent(email)}`+`Phone: ${encodeURIComponent(phone)}`+`Appointment Date: ${encodeURIComponent(date)}`+`Service: ${encodeURIComponent(department)}`+`Message: ${encodeURIComponent(message)}`;
-
-    // Gmail link to open in a new tab with filled subject and body
-    const mailtoLink = `mailto:jessitahannahselvi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-            
-            // Open default email client
-    window.location.href = mailtoLink;
-    return false;
+  return false;
 }
+
+function sendAppointmentEmail(event) {
+  event.preventDefault();
+
+  // Get form values
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const date = document.getElementById('date').value;
+  const department = document.getElementById('department').value;
+  const message = document.querySelector('textarea[name="message"]').value;
+
+  // Construct email body with basic formatting for mobile compatibility
+  const emailBody = `Hello,\n\n` +
+                    `Name: ${name}\n` +
+                    `Email: ${email}\n` +
+                    `Phone: ${phone}\n` +
+                    `Appointment Date: ${date}\n` +
+                    `Service: ${department}\n\n` +
+                    `Message: ${message}`;
+
+  // Subject for the email
+  const subject = "New Appointment Request";
+
+  // Create the mailto link with URL-encoded subject and body
+  const mailtoLink = `mailto:jessitahannahselvi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+  // Open default email client
+  window.location.href = mailtoLink;
+  return false;
+}
+
 
