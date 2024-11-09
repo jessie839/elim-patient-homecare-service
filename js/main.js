@@ -198,10 +198,10 @@
       const emailBody = `Hello,%0D%0A%0D%0AName: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
 
       // Gmail link to open in a new tab with filled subject and body
-      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=jessithannahselvi@gmail.com&su=${encodeURIComponent(subject)}&body=${emailBody}`;
-      
-      // Open Gmail in a new tab
-      window.open(gmailLink, '_blank');
+      const mailtoLink = `mailto:jessitahannahselvi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open default email client
+    window.location.href = mailtoLink;
 
       return false;
   }
@@ -220,11 +220,10 @@
     const emailBody = `Hello,%0D%0A%0D%0AName: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0APhone: ${encodeURIComponent(phone)}%0D%0AAppointment Date: ${encodeURIComponent(date)}%0D%0AService: ${encodeURIComponent(department)}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
 
     // Gmail link to open in a new tab with filled subject and body
-    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=jessitahannahselvi@gmail.com&su=Appointment%20Request&body=${emailBody}`;
-
-    // Open Gmail in a new tab
-    window.open(gmailLink, '_blank');
-
+    const mailtoLink = `mailto:jessitahannahselvi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open default email client
+    window.location.href = mailtoLink;
     return false;
 }
 
