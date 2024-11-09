@@ -195,7 +195,7 @@
       const message = document.getElementById('message').value;
 
       // Construct email body with name and email prefilled
-      const emailBody = `Hello,%0D%0A%0D%0AName: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+      const emailBody = `Hello, Name: ${encodeURIComponent(name)}Email: ${encodeURIComponent(email)}Message: ${encodeURIComponent(message)}`;
 
       // Gmail link to open in a new tab with filled subject and body
       const mailtoLink = `mailto:jessitahannahselvi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
@@ -217,7 +217,7 @@
     const message = document.querySelector('textarea[name="message"]').value;
 
     // Construct email body with form details prefilled
-    const emailBody = `Hello,%0D%0A%0D%0AName: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0APhone: ${encodeURIComponent(phone)}%0D%0AAppointment Date: ${encodeURIComponent(date)}%0D%0AService: ${encodeURIComponent(department)}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+    const emailBody = `Hello, Name: ${encodeURIComponent(name)}Email: ${encodeURIComponent(email)}Phone: ${encodeURIComponent(phone)}Appointment Date: ${encodeURIComponent(date)}Service: ${encodeURIComponent(department)}Message: ${encodeURIComponent(message)}`;
 
     // Gmail link to open in a new tab with filled subject and body
     const mailtoLink = `mailto:jessitahannahselvi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
