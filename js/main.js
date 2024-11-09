@@ -217,7 +217,7 @@
     const message = document.querySelector('textarea[name="message"]').value;
 
     // Construct email body with form details prefilled
-    const emailBody = `Hello, Name: ${encodeURIComponent(name)}Email: ${encodeURIComponent(email)}Phone: ${encodeURIComponent(phone)}Appointment Date: ${encodeURIComponent(date)}Service: ${encodeURIComponent(department)}Message: ${encodeURIComponent(message)}`;
+    const emailBody = `Hello, Name: ${encodeURIComponent(name)}`+ `Email: ${encodeURIComponent(email)}`+`Phone: ${encodeURIComponent(phone)}`+`Appointment Date: ${encodeURIComponent(date)}`+`Service: ${encodeURIComponent(department)}`+`Message: ${encodeURIComponent(message)}`;
 
     // Gmail link to open in a new tab with filled subject and body
     const mailtoLink = `mailto:jessitahannahselvi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
