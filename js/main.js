@@ -198,7 +198,7 @@ function sendEmail(event) {
   const emailBody = `Hello,\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
 
   // Create the mailto link with minimal encoding
-  const mailtoLink = `mailto:jessitahannahselvi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+  const mailtoLink = `mailto:eelimhomecare@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
 
   // Open default email client
   window.location.href = mailtoLink;
@@ -230,7 +230,7 @@ function sendAppointmentEmail(event) {
   const subject = "New Appointment Request";
 
   // Create the mailto link with URL-encoded subject and body
-  const mailtoLink = `mailto:jessitahannahselvi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+  const mailtoLink = `mailto:eelimhomecare@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
 
   // Open default email client
   window.location.href = mailtoLink;
