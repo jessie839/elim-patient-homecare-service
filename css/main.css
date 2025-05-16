@@ -7,22 +7,22 @@
 
 
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #004a8f; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #1977cc; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #ffffff; 
+  --default-color: #444444;
+  --heading-color: #004a8f;
+  --accent-color: #1977cc;
+  --surface-color: #ffffff;ckground. 
+  --contrast-color: #ffffff; 
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #004a8f;  /* The default color of the main navmenu links */
-  --nav-hover-color: #1977cc; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #004a8f; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #1977cc; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #004a8f;  
+  --nav-hover-color: #1977cc;
+  --nav-mobile-background-color: #ffffff; 
+  --nav-dropdown-background-color: #ffffff; 
+  --nav-dropdown-color: #004a8f;
+  --nav-dropdown-hover-color: #1977cc; 
 }
 
 --nav-font{
@@ -1877,47 +1877,166 @@ section,
   font-size: 14px;
 }
 
-.contact .php-email-form {
-  height: 100%;
+
+    
+
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+     padding: 20px;
+    min-height: 100vh; 
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+.row.g-0 {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 15px; 
+  justify-content: center; 
+}
+ .gallery-item {
+    overflow: hidden; 
+    position: relative; 
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
+.gallery-item img {
+  width: 500%; 
+  height: 500px; 
+  border-radius: 8px; 
+  transition: transform 0.3s ease-in-out; 
+  align-items: center;
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+.gallery-item img:hover {
+  transform: scale(1.05);
 }
 
-.contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 36px;
-  transition: 0.4s;
-  border-radius: 50px;
+.row.g-0 {
+  gap: 15px; 
 }
 
-.contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
+ 
+    .form-container {
+        max-width: 500px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        margin-left: auto;
+    }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    button {
+        background-color: #1977cc;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .note {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .stats-section {
+            background: linear-gradient(45deg, #004a8f, #1977cc);
+            padding: 70px 20px;
+            width: 100%;
+            min-height: 250px;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+           
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 3px;
+            margin-top: 20px;
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-circle img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .stat-content {
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .stats-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stat-item {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
